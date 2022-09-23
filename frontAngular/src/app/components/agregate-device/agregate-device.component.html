@@ -1,0 +1,56 @@
+<div class="container">
+    <br>
+    <h3>Add Device</h3>
+
+
+    <br>
+    <div class="row">
+
+        <div class="col-sm-6">
+            <form>
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">id_gateway:</label>
+                   <div class="col-sm-6">
+                     <select [(ngModel)]="device.id_gateway"  class="form-control" name="id_gateway" >
+                      <option [value]="x[0].id">{{x[0].id}}</option>
+                    </select>
+                   </div>
+               </div>             
+                <div class="form-group row">
+                 <label class="col-sm-3 col-form-label">UID:</label>
+                    <div class="col-sm-6">
+                      <input [(ngModel)]="device.uid" type="text" class="form-control" name="uid" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Provider:</label>
+                  <div class="col-sm-6">
+                    <input [(ngModel)]="device.Provider" type="text" class="form-control" name="provider">
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Creation Date:</label>
+                    <div class="col-sm-6">
+                      <input [(ngModel)]="device.CreationDate" type="text" class="form-control" name="creationDate">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Status:</label>
+                    <div class="col-sm-2">
+                      <input [(ngModel)]="device.active" type="checkbox" class="form-control" name="status">
+                    </div>
+                  </div>
+                  
+
+                  <br>
+                  <div class="form-group row">
+                    <button (click)="addDevice()" type="button" class="btn btn-primary">Add</button>
+                  </div>
+              </form>
+        </div>
+        <div class="col-sm-6">
+    
+        </div>
+    </div>
+    
+</div>

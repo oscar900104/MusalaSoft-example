@@ -1,0 +1,32 @@
+<br>
+
+
+<div class="container">
+    <h3>Gateway List</h3>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col">Serial lNumber</th>
+            <th scope="col">Legible Name</th>
+            <th scope="col">IPV4</th>
+            
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let g of list">
+            
+            <td class="nav-link" routerLink="/details/{{g.id}}">{{g.SerialNumber}}</td>
+            <td >{{g.LegibleName}}</td>
+            <td >{{g.ipv4}}</td>
+            <td>
+                <button (click)="delete(g.id)" type="button" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+          
+        </tbody>
+    </table>
+</div>
+
